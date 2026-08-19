@@ -1,0 +1,27 @@
+[package]
+name = "clip2term"
+version = "0.1.0"
+edition = "2021"
+description = "监听剪贴板截图并保存，Alt+V 粘贴图片路径到终端"
+
+[dependencies]
+anyhow = "1"
+arboard = "3"
+chrono = "0.4"
+dirs = "5"
+image = "0.25"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+tray-icon = "0.19"
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_Security",
+    "Win32_System_Com",
+    "Win32_System_DataExchange",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Shell_Common",
+    "Win32_UI_WindowsAndMessaging",
+] }
